@@ -1,0 +1,15 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  padding-top: 70px;
+}
+
+#main-footer{
+  margin-top: 5em;
+}
+
+.turbolinks-progress-bar {
+  height: 3px !important;
+  background-color: #649bf6 !important;
+}
