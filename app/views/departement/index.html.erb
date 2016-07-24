@@ -1,0 +1,4 @@
+<%#/* Affiche tous les départements par région */%>
+  <% for departement in @departements %>
+  <p><%= link_to departement.nomdep, "/departement/"+departement.slug %></p>
+<%end%>

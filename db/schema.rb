@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160718154418) do
+ActiveRecord::Schema.define(version: 20160723223624) do
 
   create_table "campings", force: :cascade do |t|
     t.string   "nom"
@@ -33,21 +33,40 @@ ActiveRecord::Schema.define(version: 20160718154418) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.integer  "ville_id"
+    t.integer  "region_id"
+    t.integer  "departement_id"
   end
 
-  create_table "fiche_campings", force: :cascade do |t|
-    t.string   "index"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "departements", force: :cascade do |t|
+    t.text     "description"
+    t.string   "nomdep"
+    t.integer  "departement_id"
+    t.string   "slug"
+    t.integer  "region_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
-  create_table "regionarticles", force: :cascade do |t|
-    t.string   "index"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "regions", force: :cascade do |t|
+    t.text     "descriptionregion"
+    t.text     "nomderegion"
+    t.text     "slug"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
-# Could not dump table "touslescamping" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "villes", force: :cascade do |t|
+    t.text     "nomcommune"
+    t.text     "description"
+    t.string   "nomdep"
+    t.integer  "departement_id"
+    t.integer  "code_postale"
+    t.text     "region"
+    t.integer  "region_id"
+    t.text     "slug"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
 
 end

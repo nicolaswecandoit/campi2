@@ -1,0 +1,22 @@
+<h1>Les campings de <%= @ville.nomcommune%></h1>
+
+<%# AFFICHE LES CAMPINGS POUR LA VILLE %>
+<% @ville.campings.each do |camping| %>
+<article>
+
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="..." alt="...">
+      <div class="caption">
+        <h3><%= camping.nom %> </h3>
+        <p><%= camping.description %></p>
+        <p><%= camping.adresse %>, <%= camping.commune %></p>
+        <p><%= link_to "Voir la fiche", camping_path(camping.slug), class:"btn btn-primary", role:"button" %></p>
+
+      </div>
+    </div>
+  </div>
+</div>
+</article>
+
+  <%end%>

@@ -1,0 +1,6 @@
+<% for ville in @villes %>
+
+        <h3><%= ville.nomcommune %> </h3>
+        <p><%= ville.description %></p>
+        <p><%= link_to "Voir la fiche", villes_path(slug), class:"btn btn-primary", role:"button" %></p>
+        <%end%>

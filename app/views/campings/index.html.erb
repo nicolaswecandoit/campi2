@@ -1,15 +1,19 @@
-<h1>Liste des campings <%=@campings.count%></h1>
+<h1>Liste des campings <%=@camping.count%></h1>
 
+
+
+
+<article>
 <div class="row">
 
-<% for camping in @campings %>
-<article>
+<% for camping in @camping %>
 
-  <div class="col-sm-6 col-md-4">
+  <div class="col-sm-6 col-md-3">
     <div class="thumbnail">
       <img src="..." alt="...">
       <div class="caption">
-        <h3><%= camping.nom %> </h3>
+        <h4><%= camping.nom %> </h4>
+        <p><%= camping.adresse %>, <%= camping.commune %>
         <p><%= camping.description %></p>
         <p><%= link_to "Voir la fiche", camping_path(camping.slug), class:"btn btn-primary", role:"button" %></p>
 
@@ -17,6 +21,15 @@
     </div>
   </div>
 </div>
-
-
   <%end%>
+</article>
+<ul class="pagination"><%= will_paginate @camping, :previous_label => 'Précédent', :next_label => 'Suivant' %></ul>
+
+<div class="pagination">
+  <span class="previous_page disabled">&#8592; Previous</span>
+  <em class="current">1</em>
+  <a rel="next" href="/campings?page=2">2</a>
+  <a href="/campings?page=3">3</a>
+  <a href="/campings?page=4">4</a>
+  <a class="next_page" rel="next" href="/campings?page=2">Next &#8594;</a>
+</div>

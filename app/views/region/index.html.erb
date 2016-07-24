@@ -1,0 +1,7 @@
+<%#/* Affiche les départements par région */%>
+  <% for region in @regions.sort{|a,b| a.nomderegion <=> b.nomderegion} %>
+<li>  <p><%= link_to region.nomderegion, "/region/"+region.slug %></p></li>
+  <% for departement in region.departements.sort{|a,b| a.nomdep <=> b.nomdep} %>
+  <ul><%= link_to departement.nomdep, "/departement/"+departement.slug %></ul>
+  <% end %>
+<% end %>

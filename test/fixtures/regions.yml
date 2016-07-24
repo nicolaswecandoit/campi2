@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  descriptionregion: MyText
+  nomderegion: MyText
+  slug: MyText
+
+two:
+  descriptionregion: MyText
+  nomderegion: MyText
+  slug: MyText

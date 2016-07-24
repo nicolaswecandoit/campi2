@@ -1,10 +1,21 @@
-class PagesController < ApplicationController
+class RegionController < ApplicationController
   def index
-    @campings = Camping.all
-  end
+    @regions = Region.all
+    #@departements = Departement.all
+    end
+    #def show
+    #    @regions = Region.all
+    #    @departements = Departement.all
+    #    @dep_slug = Departement.find_by(params[:region_id])
 
-def region
-  @regions = Camping.find_by(params[:region])
-end
+      #end
 
+      def detail
+
+        @departements = Departement.all
+        #slug en paramètre pour avoir tous les départements de la région
+        @region = Region.find_by_slug(params[:slug])
+
+        @camping = Camping.all
+      end
 end

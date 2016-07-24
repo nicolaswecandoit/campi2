@@ -1,0 +1,53 @@
+<%# AFFICHE LES DEPARTEMENT POUR LA REGION %>
+<h1><%= @region.nomderegion %></h1>
+<p><%= @region.descriptionregion %></p>
+
+
+<h3>Les départements de la région <%= @region.nomderegion %></h3>
+  <% @region.departements.sort{|a,b| a.nomdep <=> b.nomdep}.each do |departement| %>
+
+  <ul><%= link_to departement.nomdep, "/departement/"+departement.slug %></ul>
+<%end%>
+
+<h2> Tous les campings de la région <%= @region.nomderegion %> </h2>
+
+<% @region.campings.each do |camping| %>
+<article>
+
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="..." alt="...">
+      <div class="caption">
+        <h3><%= camping.nom %> </h3>
+        <p><%= camping.description %></p>
+        <p><%= camping.adresse %>, <%= camping.commune %></p>
+        <p><%= link_to "Voir la fiche", camping_path(camping.slug), class:"btn btn-primary", role:"button" %></p>
+
+      </div>
+    </div>
+  </div>
+</div>
+</article>
+
+  <%end%>
+
+
+<%#@departements.each do |departement| %>
+<%#= departement.region.id %>
+<%# end %>
+
+<%# @departement_ids.each do |region| %>
+<%#= region.nom %>
+<%# end %>
+
+<%#@departement_ids.each do |departement| %>
+<%#= departement.region_id %>
+<%# end %>
+
+<%# @departementsdet.each do |nomdep, regions_id| %>
+<%#= @departementsdet.description %>
+<%#end%>
+
+<%#@departementsdet.each do |departement| %>
+<%#= @departement.description %>
+<%# end %>

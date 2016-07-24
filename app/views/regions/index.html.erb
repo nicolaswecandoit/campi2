@@ -1,0 +1,19 @@
+<%#=  @regions.count %>
+<p><%#= @departements.count %></p>
+
+<%# for region in @regions %>
+
+        <h3><%#= regions.departement_id %> </h3>
+
+
+
+  <%#end%>
+
+/* Affiche les départements par région */
+  <% for region in @regions %>
+  <ul><%= region.nomderegion %></ul>
+  <p><%= link_to region.nomderegion, "/region/"+region.slug %></p>
+  <% for departement in region.departements %>
+    <li><%= departement.nomdep %></li>
+  <% end %>
+<% end %>

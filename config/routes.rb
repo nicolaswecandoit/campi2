@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'regions/index'
+
   namespace :admin do
     resources :campings
 
@@ -9,7 +11,14 @@ Rails.application.routes.draw do
   get 'about' => 'pages#about'
   get 'campings' => 'campings#index'
   get 'campings/:slug' => 'campings#show', as: :camping
-  get 'region/:region' => 'campings#region', as: :region
+  get 'villes' => 'villes#index'
+  get 'villes/:slug' => 'campings#show'
+  get 'departement' => 'departement#index'
+  get 'region' => 'region#index'
+  #get 'region/:slug' => 'regions#show'
+  get 'region/:slug' => 'region#detail'
+  get 'departement/:slug' => 'departement#detail'
+  get 'ville/:slug' => 'ville#detail'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
