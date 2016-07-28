@@ -110,6 +110,7 @@ GEM
     ffi (1.9.14-x86-mingw32)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    gmaps4rails (2.1.2)
     hike (1.2.3)
     i18n (0.7.0)
     jbuilder (2.5.0)
@@ -235,6 +236,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   compass-rails!
   dotenv-rails (~> 2.1, >= 2.1.1)
+  gmaps4rails
   jbuilder (~> 2.0)
   jquery-rails
   neat

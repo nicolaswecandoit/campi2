@@ -1,5 +1,5 @@
 <%# AFFICHE LES DEPARTEMENT POUR LA REGION %>
-<h1><%= @region.nomderegion %></h1>
+<h1><%=@region.campings.count%> campings région <%= @region.nomderegion %></h1>
 <p><%= @region.descriptionregion %></p>
 
 
@@ -10,6 +10,10 @@
 <%end%>
 
 <h2> Tous les campings de la région <%= @region.nomderegion %> </h2>
+
+<div style='width: 100%;'>
+  <div id="map" style='width: 100%; height: 500px;'></div>
+</div>
 
 <% @region.campings.each do |camping| %>
 <article>
@@ -28,10 +32,24 @@
   </div>
 </div>
 </article>
-
   <%end%>
 
+  <script>
+  handler = Gmaps.build('Google');
+  handler.buildMap({
+      provider: {disableDefaultUI: true,},
+      provider: {maxZoom: 11},
+      internal: {id: 'map'},
+        },
+    function(){
+      markers = handler.addMarkers(<%=raw @hash.to_json %>);
+      handler.bounds.extendWith(markers);
+      handler.fitMapToBounds();
+    }
 
+  );
+
+  </script>
 <%#@departements.each do |departement| %>
 <%#= departement.region.id %>
 <%# end %>

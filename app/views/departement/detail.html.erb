@@ -7,6 +7,10 @@
 <li><%= link_to ville.nomcommune, "/ville/"+ville.slug %></li>
 <%end%>
 
+<div style='width: 100%;'>
+  <div id="map" style='width: 100%; height: 500px;'></div>
+</div>
+
 <%# AFFICHE LES CAMPINGS POUR LE DEPARTEMENT %>
 <% @departement.campings.each do |camping| %>
 <article>
@@ -25,5 +29,20 @@
   </div>
 </div>
 </article>
+<script>
+handler = Gmaps.build('Google');
+handler.buildMap({
+    provider: {disableDefaultUI: true,},
+    provider: {maxZoom: 11},
+    internal: {id: 'map'},
+      },
+  function(){
+    markers = handler.addMarkers(<%=raw @hash.to_json %>);
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+  }
 
+);
+
+</script>
   <%end%>

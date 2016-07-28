@@ -11,9 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160723223624) do
+ActiveRecord::Schema.define(version: 20160727190917) do
 
-  create_table "campings", force: :cascade do |t|
+  create_table "campings", id: false, force: :cascade do |t|
+    t.integer  "id",                 null: false
     t.string   "nom"
     t.string   "adresse"
     t.string   "code_postale"
@@ -36,6 +37,9 @@ ActiveRecord::Schema.define(version: 20160723223624) do
     t.integer  "ville_id"
     t.integer  "region_id"
     t.integer  "departement_id"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "etoile"
   end
 
   create_table "departements", force: :cascade do |t|

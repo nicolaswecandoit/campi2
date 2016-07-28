@@ -17,5 +17,9 @@ class RegionController < ApplicationController
         @region = Region.find_by_slug(params[:slug])
 
         @camping = Camping.all
+        @hash = Gmaps4rails.build_markers(@region.campings) do |camping, marker|
+          marker.lat camping.latitude
+          marker.lng camping.longitude
+        end
       end
 end

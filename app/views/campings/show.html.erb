@@ -1,9 +1,15 @@
+<h1><%= @camping.nom%></h1>
+<h4><%= @camping.code_postale %> <%= @camping.commune %></h4>
 
 
-<p><%= @camping.nom %></p>
+<div style='width: 100%;'>
+  <div id="map" style='width: 100%; height: 500px;'></div>
+</div>
 
-<p><%= @camping.adresse %></p>
-<p><%= @camping.code_postale %></p>
+
+<p><%= @camping.description%> </p>
+
+<%= @camping.adresse %>
 <p><%= @camping.commune %></p>
 
 <p>Emplacements :<%= @camping.emplacements %></p>
@@ -12,3 +18,20 @@
 <p><%= @camping.tel %></p>
 <p><%= @camping.courriel %></p>
 <p><%= @camping.site_internet %></p>
+
+<script>
+handler = Gmaps.build('Google');
+handler.buildMap({
+    provider: {disableDefaultUI: true,},
+    provider: {maxZoom: 11},
+    internal: {id: 'map'},
+      },
+  function(){
+    markers = handler.addMarkers(<%=raw @hash.to_json %>);
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+  }
+
+);
+
+</script>

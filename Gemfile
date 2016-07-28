@@ -21,6 +21,8 @@ gem 'coffee-rails', '~> 4.1.0'
 #upload image
 gem 'paperclip', '~> 5.0'
 
+#Google map
+gem 'gmaps4rails'
 
 #Administre système d'administration
 gem 'administrate', '~> 0.2.2'

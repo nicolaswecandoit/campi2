@@ -11,6 +11,13 @@ class CampingsController < ApplicationController
 
   def show
     @camping = Camping.find_by_slug(params[:slug])
+    @hash = Gmaps4rails.build_markers(@camping) do |camping, marker|
+      marker.lat camping.latitude
+      marker.lng camping.longitude
+    end
+
+
+
   end
 
 
