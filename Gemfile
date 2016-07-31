@@ -10,14 +10,14 @@ gem 'sass-rails', '~> 5.0'
 #bootstrap-sass
 gem 'bootstrap-sass', '~> 3.3.6'
 #pagination
-gem 'will_paginate'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-
+gem 'geocoder'
 #upload image
 gem 'paperclip', '~> 5.0'
 
@@ -25,9 +25,9 @@ gem 'paperclip', '~> 5.0'
 gem 'gmaps4rails'
 
 #Administre système d'administration
-gem 'administrate', '~> 0.2.2'
+
 gem 'compass-rails', github: 'Compass/compass-rails', branch: '2-0-stable'
-gem 'sass'
+
 gem 'bitters'
 gem 'bourbon'
 gem 'neat'
@@ -44,11 +44,21 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'quiet_assets', '~> 1.1', :group => :development
+
+gem 'rails-i18n', '~> 4.0', '>= 4.0.8'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
+gem 'thin', '~> 1.7'
+
+# Pagination
+gem 'will_paginate', '~> 3.1'
+
+#Administration
+gem 'devise', '~> 4.2'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

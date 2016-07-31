@@ -1,7 +1,6 @@
+
+
 <h1>Liste des campings <%=@camping.count%></h1>
-
-
-
 
 <article>
 <div class="row">
@@ -24,12 +23,3 @@
   <%end%>
 </article>
 <ul class="pagination"><%= will_paginate @camping, :previous_label => 'Précédent', :next_label => 'Suivant' %></ul>
-
-<div class="pagination">
-  <span class="previous_page disabled">&#8592; Previous</span>
-  <em class="current">1</em>
-  <a rel="next" href="/campings?page=2">2</a>
-  <a href="/campings?page=3">3</a>
-  <a href="/campings?page=4">4</a>
-  <a class="next_page" rel="next" href="/campings?page=2">Next &#8594;</a>
-</div>

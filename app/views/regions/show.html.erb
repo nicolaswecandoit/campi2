@@ -1,9 +1,0 @@
-/* Affiche les départements suivant la région */
-<% @regions.each do |region| %>
- <h1><%= region.nomderegion %></h1>
-    <% region.departements.each do |departement| %>
-    <ul>
-       <li><%= departement.nomdep %></li>
-    </ul>
-    <% end %>
-<% end %>

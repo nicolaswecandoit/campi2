@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     root to: "campings#index"
   end
 
-    root 'pages#index'
+  root 'pages#index'
   get 'about' => 'pages#about'
   get 'campings' => 'campings#index'
   get 'campings/:slug' => 'campings#show', as: :camping
@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   get 'region/:slug' => 'region#detail'
   get 'departement/:slug' => 'departement#detail'
   get 'ville/:slug' => 'ville#detail'
+  get 'campings/test/1' => 'campings#detail'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

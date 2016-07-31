@@ -38,7 +38,7 @@
   handler = Gmaps.build('Google');
   handler.buildMap({
       provider: {disableDefaultUI: true,},
-      provider: {maxZoom: 11},
+      provider: {maxZoom: 20},
       internal: {id: 'map'},
         },
     function(){
@@ -50,6 +50,7 @@
   );
 
   </script>
+
 <%#@departements.each do |departement| %>
 <%#= departement.region.id %>
 <%# end %>
