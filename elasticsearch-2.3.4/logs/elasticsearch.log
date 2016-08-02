@@ -1,0 +1,50 @@
+[2016-08-02 15:32:20,871][WARN ][bootstrap                ] jvm uses the client vm, make sure to run `java` with the server vm for best performance by adding `-server` to the command line
+[2016-08-02 15:32:22,149][INFO ][node                     ] [Chrome] version[2.3.4], pid[6296], build[e455fd0/2016-06-30T11:24:31Z]
+[2016-08-02 15:32:22,152][INFO ][node                     ] [Chrome] initializing ...
+[2016-08-02 15:32:23,877][INFO ][plugins                  ] [Chrome] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2016-08-02 15:32:24,012][INFO ][env                      ] [Chrome] using [1] data paths, mounts [[System (C:)]], net usable_space [77.3gb], net total_space [232.3gb], spins? [unknown], types [NTFS]
+[2016-08-02 15:32:24,014][INFO ][env                      ] [Chrome] heap size [989.8mb], compressed ordinary object pointers [unknown]
+[2016-08-02 15:32:30,331][INFO ][node                     ] [Chrome] initialized
+[2016-08-02 15:32:30,332][INFO ][node                     ] [Chrome] starting ...
+[2016-08-02 15:32:30,702][INFO ][transport                ] [Chrome] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-08-02 15:32:30,708][INFO ][discovery                ] [Chrome] elasticsearch/6vxNDIMBSb2ZJXT4qvCU6A
+[2016-08-02 15:32:34,848][INFO ][cluster.service          ] [Chrome] new_master {Chrome}{6vxNDIMBSb2ZJXT4qvCU6A}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-08-02 15:32:34,919][INFO ][http                     ] [Chrome] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-08-02 15:32:34,919][INFO ][node                     ] [Chrome] started
+[2016-08-02 15:32:35,050][INFO ][gateway                  ] [Chrome] recovered [0] indices into cluster_state
+[2016-08-02 15:35:28,171][INFO ][node                     ] [Chrome] stopping ...
+[2016-08-02 15:35:28,214][INFO ][node                     ] [Chrome] stopped
+[2016-08-02 15:35:28,214][INFO ][node                     ] [Chrome] closing ...
+[2016-08-02 15:35:28,223][INFO ][node                     ] [Chrome] closed
+[2016-08-02 15:36:09,004][WARN ][bootstrap                ] jvm uses the client vm, make sure to run `java` with the server vm for best performance by adding `-server` to the command line
+[2016-08-02 15:36:09,212][INFO ][node                     ] [Fixx] version[2.3.4], pid[796], build[e455fd0/2016-06-30T11:24:31Z]
+[2016-08-02 15:36:09,212][INFO ][node                     ] [Fixx] initializing ...
+[2016-08-02 15:36:09,698][INFO ][plugins                  ] [Fixx] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2016-08-02 15:36:09,717][INFO ][env                      ] [Fixx] using [1] data paths, mounts [[System (C:)]], net usable_space [77.3gb], net total_space [232.3gb], spins? [unknown], types [NTFS]
+[2016-08-02 15:36:09,718][INFO ][env                      ] [Fixx] heap size [989.8mb], compressed ordinary object pointers [unknown]
+[2016-08-02 15:36:11,290][INFO ][node                     ] [Fixx] initialized
+[2016-08-02 15:36:11,291][INFO ][node                     ] [Fixx] starting ...
+[2016-08-02 15:36:11,430][INFO ][transport                ] [Fixx] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-08-02 15:36:11,434][INFO ][discovery                ] [Fixx] elasticsearch/u7g5fLHnRNyATFpauA-4AA
+[2016-08-02 15:36:15,481][INFO ][cluster.service          ] [Fixx] new_master {Fixx}{u7g5fLHnRNyATFpauA-4AA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-08-02 15:36:15,530][INFO ][gateway                  ] [Fixx] recovered [0] indices into cluster_state
+[2016-08-02 15:36:15,560][INFO ][http                     ] [Fixx] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-08-02 15:36:15,561][INFO ][node                     ] [Fixx] started
+[2016-08-02 15:37:27,847][INFO ][node                     ] [Fixx] stopping ...
+[2016-08-02 15:37:27,858][INFO ][node                     ] [Fixx] stopped
+[2016-08-02 15:37:27,858][INFO ][node                     ] [Fixx] closing ...
+[2016-08-02 15:37:27,863][INFO ][node                     ] [Fixx] closed
+[2016-08-02 16:30:22,758][WARN ][bootstrap                ] jvm uses the client vm, make sure to run `java` with the server vm for best performance by adding `-server` to the command line
+[2016-08-02 16:30:23,612][INFO ][node                     ] [Dionysus] version[2.3.4], pid[2452], build[e455fd0/2016-06-30T11:24:31Z]
+[2016-08-02 16:30:23,613][INFO ][node                     ] [Dionysus] initializing ...
+[2016-08-02 16:30:25,099][INFO ][plugins                  ] [Dionysus] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2016-08-02 16:30:25,208][INFO ][env                      ] [Dionysus] using [1] data paths, mounts [[System (C:)]], net usable_space [77.1gb], net total_space [232.3gb], spins? [unknown], types [NTFS]
+[2016-08-02 16:30:25,210][INFO ][env                      ] [Dionysus] heap size [989.8mb], compressed ordinary object pointers [unknown]
+[2016-08-02 16:30:30,768][INFO ][node                     ] [Dionysus] initialized
+[2016-08-02 16:30:30,770][INFO ][node                     ] [Dionysus] starting ...
+[2016-08-02 16:30:31,291][INFO ][transport                ] [Dionysus] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-08-02 16:30:31,298][INFO ][discovery                ] [Dionysus] elasticsearch/pGPEvHbTT6Wzcp8ORPlDpQ
+[2016-08-02 16:30:35,417][INFO ][cluster.service          ] [Dionysus] new_master {Dionysus}{pGPEvHbTT6Wzcp8ORPlDpQ}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-08-02 16:30:35,533][INFO ][http                     ] [Dionysus] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-08-02 16:30:35,535][INFO ][node                     ] [Dionysus] started
+[2016-08-02 16:30:35,591][INFO ][gateway                  ] [Dionysus] recovered [0] indices into cluster_state

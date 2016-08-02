@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  devise_for :users
+  devise_for :models
   get 'regions/index'
 
   namespace :admin do
@@ -20,6 +23,8 @@ Rails.application.routes.draw do
   get 'departement/:slug' => 'departement#detail'
   get 'ville/:slug' => 'ville#detail'
   get 'campings/test/1' => 'campings#detail'
+  get 'search', to: 'search#search'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

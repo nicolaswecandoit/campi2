@@ -42,5 +42,6 @@ Rails.application.configure do
 
   Paperclip.options[:command_path] = 'C:\Program Files (x86)\GnuWin32\bin'
   Paperclip.options[:command_path] = 'C:\Sites\SITEDE~1\IMAGEM~1\IMAGEM~1.2-Q\WWW'
-  
+
+
 end

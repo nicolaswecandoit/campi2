@@ -1,25 +1,30 @@
-
-
 <h1>Liste des campings <%=@camping.count%></h1>
+
+<%#= form_tag campings_path, :method => 'get' do %>
+<%#= text_field_tag :search, params[:search] %>
+<%# end%>
+
+<%= form_tag campings_path, method: :get do %>
+  <p>
+    <%= text_field_tag :query, params[:query] %>
+    <%= submit_tag "Search", name: nil %>
+  </p>
+<% end %>
 
 <article>
 <div class="row">
-
 <% for camping in @camping %>
+  <div class="col-xs-6 col-md-4">
 
-  <div class="col-sm-6 col-md-3">
-    <div class="thumbnail">
-      <img src="..." alt="...">
       <div class="caption">
-        <h4><%= camping.nom %> </h4>
+        <h5><%= camping.nom %> </h5>
         <p><%= camping.adresse %>, <%= camping.commune %>
         <p><%= camping.description %></p>
         <p><%= link_to "Voir la fiche", camping_path(camping.slug), class:"btn btn-primary", role:"button" %></p>
-
       </div>
-    </div>
+<hr>
   </div>
-</div>
   <%end%>
+</div>
 </article>
-<ul class="pagination"><%= will_paginate @camping, :previous_label => 'Précédent', :next_label => 'Suivant' %></ul>
+<ul class="pagination"><%= will_paginate @campingpagination, :previous_label => 'Précédent', :next_label => 'Suivant' %></ul>

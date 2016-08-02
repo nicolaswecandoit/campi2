@@ -1,9 +1,12 @@
 class CampingsController < ApplicationController
+
   def index
 
-    @camping = Camping.all.paginate(:per_page => 20, :page => params[:page])
+    @campingpagination = Camping.all.paginate(:per_page => 20, :page => params[:page])
     @villes = Ville.all
     @ville = Ville.all
+    @campings = Camping.all
+    @campings = Camping.search(params)
 
     end
 

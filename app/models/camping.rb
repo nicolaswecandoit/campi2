@@ -1,4 +1,5 @@
 class Camping < ActiveRecord::Base
+  
   belongs_to :ville
   belongs_to :departement
   belongs_to :region
@@ -10,8 +11,4 @@ class Camping < ActiveRecord::Base
   geocoded_by :addresse
   after_validation :geocode
 
-  def self.search(search)
-    where("nom LIKE ? OR adresse LIKE ? OR commune LIKE ?", "%#{search}%", "%#{search}%", "%#{search}%")
   end
-
-end

@@ -9,8 +9,6 @@ gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
 #bootstrap-sass
 gem 'bootstrap-sass', '~> 3.3.6'
-#pagination
-
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -26,7 +24,9 @@ gem 'gmaps4rails'
 
 #Administre système d'administration
 
-gem 'compass-rails', github: 'Compass/compass-rails', branch: '2-0-stable'
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
+gem 'tire'
 
 gem 'bitters'
 gem 'bourbon'
