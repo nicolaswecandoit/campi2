@@ -1,0 +1,19 @@
+recherche avancéem
+<%= form_for @search, html: {class:"pure-form"} do |s| %>
+
+<div class="field">
+<%= s.label :nom %>
+<%= s.text_field :nom %>
+</div>
+
+<div class="field">
+<%= s.label :region %>
+<%= s.select :region, options_for_select(@regions), :include_blank => true %>
+</div>
+
+<div class="field">
+<%= s.label :nomdep %>
+<%= s.select :nomdep, options_for_select(@deparetment), :include_blank => true %>
+</div>
+
+<%end%>

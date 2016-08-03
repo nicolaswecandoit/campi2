@@ -14,9 +14,13 @@
               <li><%= link_to "Tous les campings", campings_url %></li>
               <li><%= link_to "Les régions", region_url %></li>
               <li><a href="#">Contact</a></li>
+
+              <!--Lien vers l'enregistrement -->
+              <%= render 'devise/menu/registration_items' %>
+               <%= render 'devise/menu/login_items' %>
+               <!--Lien vers l'enregistrement -->
+
             </ul>
           </div><!--/.nav-collapse -->
         </div>
       </nav>
-
-    

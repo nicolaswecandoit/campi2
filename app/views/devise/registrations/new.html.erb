@@ -21,9 +21,14 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+  <%= hidden_field_tag :admin, '' %>
+  <%= check_box_tag :admin, checked = true %> Admin</br></br>
+
+  <div class="form-group">
+  </br><%= f.submit "Sign up", class:"btn btn-default"%>
   </div>
+
+
 <% end %>
 
 <%= render "devise/shared/links" %>

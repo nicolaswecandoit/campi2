@@ -48,3 +48,8 @@
 [2016-08-02 16:30:35,533][INFO ][http                     ] [Dionysus] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
 [2016-08-02 16:30:35,535][INFO ][node                     ] [Dionysus] started
 [2016-08-02 16:30:35,591][INFO ][gateway                  ] [Dionysus] recovered [0] indices into cluster_state
+[2016-08-02 16:47:12,881][INFO ][bootstrap                ] running graceful exit on windows
+[2016-08-02 16:47:12,882][INFO ][node                     ] [Dionysus] stopping ...
+[2016-08-02 16:47:13,021][INFO ][node                     ] [Dionysus] stopped
+[2016-08-02 16:47:13,021][INFO ][node                     ] [Dionysus] closing ...
+[2016-08-02 16:47:13,078][INFO ][node                     ] [Dionysus] closed

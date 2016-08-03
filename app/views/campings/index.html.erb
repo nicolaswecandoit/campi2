@@ -1,15 +1,16 @@
 <h1>Liste des campings <%=@camping.count%></h1>
 
-<%#= form_tag campings_path, :method => 'get' do %>
-<%#= text_field_tag :search, params[:search] %>
-<%# end%>
 
-<%= form_tag campings_path, method: :get do %>
+<%= form_tag campings_path, :method => 'get' do %>
   <p>
-    <%= text_field_tag :query, params[:query] %>
-    <%= submit_tag "Search", name: nil %>
+<%= text_field_tag :search, params[:search] %>
+<%= submit_tag "Search" %>
   </p>
-<% end %>
+<%end%>
+
+<div style='width: 100%;'>
+  <div id="map" style='width: 100%; height: 500px;'></div>
+</div>
 
 <article>
 <div class="row">
@@ -27,4 +28,21 @@
   <%end%>
 </div>
 </article>
-<ul class="pagination"><%= will_paginate @campingpagination, :previous_label => 'Précédent', :next_label => 'Suivant' %></ul>
+
+<script>
+handler = Gmaps.build('Google');
+handler.buildMap({
+    provider: {disableDefaultUI: true,},
+    provider: {maxZoom: 20},
+    provider: {radius: 20000},
+    internal: {id: 'map'},
+      },
+  function(){
+    markers = handler.addMarkers(<%=raw @hash.to_json %>);
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+  }
+
+);
+
+</script>

@@ -1,14 +1,12 @@
 Rails.application.routes.draw do
 
+
+
+  devise_for :admins
   devise_for :users
-  devise_for :models
   get 'regions/index'
 
-  namespace :admin do
-    resources :campings
 
-    root to: "campings#index"
-  end
 
   root 'pages#index'
   get 'about' => 'pages#about'
@@ -24,6 +22,7 @@ Rails.application.routes.draw do
   get 'ville/:slug' => 'ville#detail'
   get 'campings/test/1' => 'campings#detail'
   get 'search', to: 'search#search'
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
