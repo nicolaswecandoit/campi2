@@ -8,9 +8,6 @@
   </p>
 <%end%>
 
-<div style='width: 100%;'>
-  <div id="map" style='width: 100%; height: 500px;'></div>
-</div>
 
 <article>
 <div class="row">
@@ -28,21 +25,3 @@
   <%end%>
 </div>
 </article>
-
-<script>
-handler = Gmaps.build('Google');
-handler.buildMap({
-    provider: {disableDefaultUI: true,},
-    provider: {maxZoom: 20},
-    provider: {radius: 20000},
-    internal: {id: 'map'},
-      },
-  function(){
-    markers = handler.addMarkers(<%=raw @hash.to_json %>);
-    handler.bounds.extendWith(markers);
-    handler.fitMapToBounds();
-  }
-
-);
-
-</script>

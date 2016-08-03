@@ -22,8 +22,10 @@ gem 'paperclip', '~> 5.0'
 #Google map
 gem 'gmaps4rails'
 
-#Administre système d'administration
+#Role pour l'admin
+gem 'cancancan'
 
+#Recherches
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
 gem 'tire'
